@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div class="parallax">
+			<section class="parallax__header">
+				<div class="parallax__visuals">
+					<div class="parallax__black-line-overflow"></div>
+					<div data-parallax-layers class="parallax__layers">
+						<video id="video" autoplay muted loop>
+							<source
+								src="Assets/Videos/Header Video.mov"
+								type="video/mp4"
+								loading="eager"
+								width="800"
+								data-parallax-layer="1"
+								alt=""
+								class="parallax__layer-img" />
+						</video>
+						<img
+							src=""
+							loading="eager"
+							width="800"
+							data-parallax-layer="2"
+							alt=""
+							class="parallax__layer-img" />
+						<div data-parallax-layer="3" class="parallax__layer-title">
+							<h2 class="parallax__title">Welcome to the Show</h2>
+						</div>
+						<img
+							src="Assets/Images/Untitled.png"
+							loading="eager"
+							width="800"
+							data-parallax-layer="4"
+							alt=""
+							class="parallax__layer-img" />
+					</div>
+					<div class="parallax__fade"></div>
+				</div>
+			</section>
+			<section class="parallax__content">
+				<div
+					id="twitch-embed"
+					class="content"
+					width="100%"
+					viewbox="0 0 160 160"
+					fill="none"
+					class="osmo-icon-svg"></div>
+
+				<!-- Load the Twitch embed JavaScript file -->
+				<script src="https://embed.twitch.tv/embed/v1.js"></script>
+
+				<!-- Create a Twitch.Embed object that will render within the "twitch-embed" element -->
+				<script type="text/javascript">
+					new Twitch.Embed("twitch-embed", {
+						width: 854,
+						height: 480,
+						channel: "imn0tyourguy",
+					});
+				</script>
+			</section>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+		<script src="https://unpkg.com/lenis@1.1.14/dist/lenis.min.js"></script>
+		<script src="index.js"></script>
+	</body>
+</html>
